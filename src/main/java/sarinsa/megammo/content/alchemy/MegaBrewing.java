@@ -21,8 +21,19 @@ public class MegaBrewing {
     private Map<Integer, List<ItemStack>> potionTiers = new HashMap<>();
 
 
+    //------------------------ POTIONS -------------------------//
+
+    public static final AlchemyPotion DARKNESS = new AlchemyPotionBuilder()
+            .name("POTION_OF_DARKNESS")
+            .color(Color.BLACK)
+            .effects(ImmutableList.of(new PotionEffect(PotionEffectType.DARKNESS, 300, 0)))
+            .build();
+
+    //---------------------------------------------------------//
+
+
     public void registerPotions() {
-        registerPotion(MegaPotions.DARKNESS, new ItemStack(Material.SCULK), 4);
+        registerPotion(DARKNESS, new ItemStack(Material.SCULK), 4);
     }
 
 
@@ -53,14 +64,5 @@ public class MegaBrewing {
         potionTiers.put(8, ReflectionHelper.get(PotionConfig.getInstance(), "concoctionsIngredientsTierEight"));
 
         registerPotions();
-    }
-
-    public static class MegaPotions {
-
-        public static final AlchemyPotion DARKNESS = new AlchemyPotionBuilder()
-                .name("POTION_OF_DARKNESS")
-                .color(Color.BLACK)
-                .effects(ImmutableList.of(new PotionEffect(PotionEffectType.DARKNESS, 300, 0)))
-                .build();
     }
 }
