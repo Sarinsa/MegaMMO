@@ -12,7 +12,7 @@ public class ReflectionHelper {
 
     public static void set(Object toAccess, String targetField, Object value) {
         try {
-            Field field = toAccess.getClass().getField(targetField);
+            Field field = toAccess.getClass().getDeclaredField(targetField);
             boolean changedAccess = field.trySetAccessible();
 
             if (!changedAccess) {
@@ -36,7 +36,7 @@ public class ReflectionHelper {
     @SuppressWarnings("unchecked")
     public static <T> T get(Object toAccess, String targetField) {
         try {
-            Field field = toAccess.getClass().getField(targetField);
+            Field field = toAccess.getClass().getDeclaredField(targetField);
             boolean changedAccess = field.trySetAccessible();
 
             if (!changedAccess) {
@@ -63,7 +63,7 @@ public class ReflectionHelper {
     @SuppressWarnings("unchecked")
     public static <T> T getStatic(Class<T> targetClass, String targetField) {
         try {
-            Field field = targetClass.getField(targetField);
+            Field field = targetClass.getDeclaredField(targetField);
             boolean changedAccess = field.trySetAccessible();
 
             if (!changedAccess) {

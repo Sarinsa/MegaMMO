@@ -19,7 +19,7 @@ public class AlchemyPotionBuilder {
     private Material material = Material.POTION;
     private PotionData data = new PotionData(PotionType.UNCRAFTABLE);
     private String name = "GENERIC_POTION";
-    private List<String> lore = ImmutableList.of("Hee", "hee", "hee", "HAW");
+    private List<String> lore = ImmutableList.of("");
     private List<PotionEffect> effects = ImmutableList.of(new PotionEffect(PotionEffectType.REGENERATION, 80, 0));
     private Color color = Color.TEAL;
     private Map<ItemStack, String> children;

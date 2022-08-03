@@ -3,7 +3,7 @@ version: '${version}'
 main: sarinsa.megammo.core.MegaMMO
 api-version: 1.19
 prefix: MegaMMO
-load: STARTUP
+load: POSTWORLD
 depend: [ mcMMO ]
 authors: [ Sarinsa ]
 description: McMMO addon

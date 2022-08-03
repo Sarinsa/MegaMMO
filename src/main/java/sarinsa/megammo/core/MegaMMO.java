@@ -2,6 +2,7 @@ package sarinsa.megammo.core;
 
 import com.gmail.nossr50.mcMMO;
 import org.bukkit.plugin.java.JavaPlugin;
+import sarinsa.megammo.content.alchemy.AbstractMegaBrewing;
 import sarinsa.megammo.content.alchemy.MegaBrewing;
 
 public final class MegaMMO extends JavaPlugin {
@@ -12,7 +13,7 @@ public final class MegaMMO extends JavaPlugin {
     /** McMMO instance. */
     private mcMMO mcMMO;
 
-    private MegaBrewing megaBrewing = new MegaBrewing();
+    private AbstractMegaBrewing megaBrewing = new MegaBrewing();
 
 
     @Override
