@@ -33,15 +33,21 @@ public class MegaBrewing extends AbstractMegaBrewing {
             .effects(ImmutableList.of(new PotionEffect(PotionEffectType.DARKNESS, 900, 0)))
             .build();
 
+    public static final AlchemyPotion STRONG_DARKNESS = new AlchemyPotionBuilder()
+            .name("LONG_POTION_OF_DARKNESS")
+            .color(Color.BLACK)
+            .effects(ImmutableList.of(new PotionEffect(PotionEffectType.DARKNESS, 180, 1)))
+            .build();
+
     public static final AlchemyPotion DARKNESS = new AlchemyPotionBuilder()
             .name("POTION_OF_DARKNESS")
             .color(Color.BLACK)
-            .effects(ImmutableList.of(new PotionEffect(PotionEffectType.DARKNESS, 300, 0)))
+            .effects(ImmutableList.of(new PotionEffect(PotionEffectType.DARKNESS, 400, 0)))
             .build();
 
     public static final AlchemyPotion LEVITATION = new AlchemyPotionBuilder()
             .name("POTION_OF_LEVITATION")
-            .effects(ImmutableList.of(new PotionEffect(PotionEffectType.LEVITATION, 300, 0)))
+            .effects(ImmutableList.of(new PotionEffect(PotionEffectType.LEVITATION, 400, 0)))
             .build();
 
     //---------------------------------------------------------//
