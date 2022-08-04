@@ -5,6 +5,12 @@
 *.ipr
 *.iws
 
+# BuildTools stuff
+BuildData
+Bukkit
+CraftBukkit
+Spigot
+
 # IntelliJ
 out/
 # mpeltonen/sbt-idea plugin

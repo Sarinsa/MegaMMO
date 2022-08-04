@@ -4,6 +4,7 @@ import com.gmail.nossr50.datatypes.skills.alchemy.AlchemyPotion;
 import com.google.common.collect.ImmutableList;
 import org.bukkit.Color;
 import org.bukkit.Material;
+import org.bukkit.craftbukkit.v1_19_R1.entity.CraftZombie;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionData;
 import org.bukkit.potion.PotionEffect;
@@ -26,6 +27,7 @@ public class AlchemyPotionBuilder {
 
 
     public AlchemyPotionBuilder() {
+
     }
 
     public AlchemyPotionBuilder material(Material material) {

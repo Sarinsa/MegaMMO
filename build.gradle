@@ -18,10 +18,14 @@ repositories {
     flatDir {
         dir 'local_deps'
     }
+    flatDir {
+        dir project.getRootDir()
+    }
 }
 
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT'
+    compileOnly 'blank:craftbukkit:1.19-R0.1-SNAPSHOT'
     compileOnly 'blank:mcmmo:1.19'
 }
 
