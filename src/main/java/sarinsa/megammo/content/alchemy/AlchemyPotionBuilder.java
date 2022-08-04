@@ -26,7 +26,6 @@ public class AlchemyPotionBuilder {
 
 
     public AlchemyPotionBuilder() {
-
     }
 
     public AlchemyPotionBuilder material(Material material) {
