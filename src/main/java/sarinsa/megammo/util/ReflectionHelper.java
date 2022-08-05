@@ -12,7 +12,7 @@ import java.lang.reflect.Field;
  */
 public class ReflectionHelper {
 
-    private static final String logPrefix = "[" + ReflectionHelper.class.getSimpleName() + "] ";
+    private static final String logPrefix = "[Reflection Helper] ";
 
 
     /**
