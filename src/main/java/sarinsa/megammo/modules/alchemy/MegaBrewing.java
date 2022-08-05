@@ -1,4 +1,4 @@
-package sarinsa.megammo.content.alchemy;
+package sarinsa.megammo.modules.alchemy;
 
 import com.gmail.nossr50.datatypes.skills.alchemy.AlchemyPotion;
 import com.google.common.collect.ImmutableList;
@@ -7,7 +7,6 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
-import sarinsa.megammo.core.MegaMMO;
 
 public class MegaBrewing extends AbstractMegaBrewing {
 
@@ -54,9 +53,14 @@ public class MegaBrewing extends AbstractMegaBrewing {
 
     @Override
     protected void registerPotions() {
-        MegaMMO.INSTANCE.getLogger().info("Registering additional potions and brewing recipes...");
+        info("Registering additional potions and brewing recipes...");
 
         registerPotion(AWKWARD_POTION, DARKNESS, SCULK);
         registerPotion(AWKWARD_POTION, LEVITATION, FEATHER);
+    }
+
+    @Override
+    public String logPrefix() {
+        return "Alchemy Module";
     }
 }

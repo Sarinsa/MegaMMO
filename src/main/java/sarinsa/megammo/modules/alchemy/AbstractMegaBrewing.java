@@ -1,8 +1,9 @@
-package sarinsa.megammo.content.alchemy;
+package sarinsa.megammo.modules.alchemy;
 
 import com.gmail.nossr50.config.skills.alchemy.PotionConfig;
 import com.gmail.nossr50.datatypes.skills.alchemy.AlchemyPotion;
 import org.bukkit.inventory.ItemStack;
+import sarinsa.megammo.modules.AbstractModule;
 import sarinsa.megammo.util.ReflectionHelper;
 
 import java.util.HashMap;
@@ -14,7 +15,7 @@ import java.util.Objects;
  * Handles custom potion recipes
  * and concoction ingredients.
  */
-public abstract class AbstractMegaBrewing {
+public abstract class AbstractMegaBrewing extends AbstractModule {
 
     // Obtained via reflection
     private Map<String, AlchemyPotion> potionMap;
@@ -32,6 +33,7 @@ public abstract class AbstractMegaBrewing {
      protected final void registerPotion(AlchemyPotion parent, AlchemyPotion child, PotionIngredient ingredient) {
         Objects.requireNonNull(parent);
         Objects.requireNonNull(child);
+        Objects.requireNonNull(ingredient);
 
         potionMap.put(child.getName(), child);
 
@@ -45,7 +47,18 @@ public abstract class AbstractMegaBrewing {
         }
     }
 
+    /**
+     *  Registers a child potion to the given parent potion.
+     *  Also creates sub potions (splash, extended, lingering etc.)
+     */
+    // TODO
+    protected final void registerPotionWithVariants(AlchemyPotion child, PotionIngredient ingredient) {
+        Objects.requireNonNull(child);
+        Objects.requireNonNull(ingredient);
+    }
+
     /** Big reflection moment! */
+    @Override
     public final void init() {
         potionMap = ReflectionHelper.get(PotionConfig.getInstance(), "potionMap");
 
