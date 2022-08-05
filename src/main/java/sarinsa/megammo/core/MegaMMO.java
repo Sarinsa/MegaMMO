@@ -11,6 +11,26 @@ import sarinsa.megammo.event.EntityListener;
 
 public final class MegaMMO extends JavaPlugin {
 
+    //------------------------ Feature List ----------------------------//
+    //  o = Complete feature
+    //  x = Incomplete feature
+    //  - = Planned feature
+    //  ? = Feature to consider
+    //
+    //
+    //  ------- ALCHEMY -------
+    //  (x) Potion of Darkness, alchemy
+    //  (-) Potion of Levitation, alchemy
+    //
+    //  ----- EXCAVATION -----
+    //  (-) Command for toggling excavation drops
+    //
+    //  ------- TAMING -------
+    //  (?) Wolf dodge arrow AI (unlockable ability; "Quick Reflexes")
+    //
+    //------------------------------------------------------------------//
+
+
     /** Plugin instance. */
     public static MegaMMO INSTANCE;
 
