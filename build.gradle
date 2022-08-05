@@ -1,3 +1,8 @@
+// NOTE:
+// This project requires mcMMO and craftbukkit as dependencies.
+// Make sure you fetch/build these dependencies and put them in
+// a folder named "local_deps" in the root folder.
+
 plugins {
     id 'java'
 }
